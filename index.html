@@ -61,40 +61,11 @@
 
 		.brand .z { color: var(--red); }
 
-		.troll-stage {
-			position: relative;
-			margin: 1.4rem auto 1.1rem;
-			width: min(280px, 55vw);
-			height: min(280px, 55vw);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.troll-stage::before {
-			content: "";
-			position: absolute;
-			inset: 12%;
-			border-radius: 50%;
-			background: radial-gradient(circle, var(--red-soft), transparent 70%);
-			filter: blur(12px);
-			animation: pulse 2.4s ease-in-out infinite;
-		}
-
-		.troll {
-			position: relative;
-			width: 78%;
-			height: auto;
-			image-rendering: auto;
-			filter: drop-shadow(0 12px 24px rgba(0,0,0,0.55));
-			animation: bob 1.1s ease-in-out infinite;
-		}
-
 		.headline {
 			font-size: clamp(1.15rem, 3.2vw, 1.55rem);
 			font-weight: 600;
 			letter-spacing: 0.04em;
-			margin-bottom: 0.35rem;
+			margin: 1.2rem 0 0.35rem;
 		}
 
 		.dots::after {
@@ -183,16 +154,6 @@
 			color: rgba(154, 145, 150, 0.7);
 		}
 
-		@keyframes bob {
-			0%, 100% { transform: translateY(0) rotate(-1deg); }
-			50% { transform: translateY(-10px) rotate(1.5deg); }
-		}
-
-		@keyframes pulse {
-			0%, 100% { opacity: 0.55; transform: scale(0.95); }
-			50% { opacity: 1; transform: scale(1.05); }
-		}
-
 		@keyframes dots {
 			0% { content: ""; }
 			25% { content: "."; }
@@ -210,10 +171,6 @@
 	<div class="noise"></div>
 	<div class="wrap">
 		<div class="brand"><span class="z">Z</span>-OLD</div>
-
-		<div class="troll-stage">
-			<img class="troll" src="trollface.gif" alt="trollface" />
-		</div>
 
 		<div class="headline dots">You join to Z-OLD</div>
 		<div class="meta" id="meta">Connecting…</div>
